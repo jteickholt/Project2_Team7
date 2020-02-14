@@ -13,4 +13,4 @@ https://www.census.gov/acs/www/data/data-tables-and-tools/
 https://www.ncei.noaa.gov/support/access-data-service-api-user-documentation
 
 
-#### The final output will look very similar to the Dashboar_Preview power point presentation that is in the repo.
+#### The final output will look very similar to the Dashboard_Preview power point presentation that is in the repo.
