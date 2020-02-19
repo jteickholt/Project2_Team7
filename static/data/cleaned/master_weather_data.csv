@@ -1,0 +1,613 @@
+State,avg_high,avg_low,avg_prec,Month
+Alabama,57,36,4.65,Jan
+Alabama,62,39,5.28,Feb
+Alabama,70,45,5.94,Mar
+Alabama,77,52,4.02,Apr
+Alabama,84,61,3.54,May
+Alabama,90,68,4.06,Jun
+Alabama,92,71,5.24,Jul
+Alabama,92,71,3.98,Aug
+Alabama,87,65,3.98,Sep
+Alabama,78,53,2.91,Oct
+Alabama,69,44,4.61,Nov
+Alabama,60,37,4.84,Dec
+Kentucky,40,21,3.15,Jan
+Kentucky,45,23,3.07,Feb
+Kentucky,55,31,4.06,Mar
+Kentucky,66,39,3.66,Apr
+Kentucky,75,49,4.61,May
+Kentucky,83,59,4.41,Jun
+Kentucky,87,63,4.17,Jul
+Kentucky,86,62,3.58,Aug
+Kentucky,79,55,3.15,Sep
+Kentucky,68,42,2.68,Oct
+Kentucky,55,34,3.35,Nov
+Kentucky,44,26,3.7,Dec
+North Dakota,23,2,0.43,Jan
+North Dakota,28,8,0.51,Feb
+North Dakota,40,19,0.87,Mar
+North Dakota,57,31,1.26,Apr
+North Dakota,68,43,2.4,May
+North Dakota,77,52,3.19,Jun
+North Dakota,85,57,2.87,Jul
+North Dakota,83,56,2.28,Aug
+North Dakota,72,45,1.57,Sep
+North Dakota,58,32,1.26,Oct
+North Dakota,40,19,0.71,Nov
+North Dakota,26,6,0.47,Dec
+Alaska,23,11,0.75,Jan
+Alaska,27,14,0.71,Feb
+Alaska,34,19,0.59,Mar
+Alaska,44,29,0.47,Apr
+Alaska,56,40,0.71,May
+Alaska,63,48,0.98,Jun
+Alaska,65,52,1.81,Jul
+Alaska,64,50,3.27,Aug
+Alaska,55,42,2.99,Sep
+Alaska,40,29,2.05,Oct
+Alaska,28,17,1.14,Nov
+Alaska,25,13,1.1,Dec
+Louisiana,62,45,5.12,Jan
+Louisiana,65,48,5.28,Feb
+Louisiana,72,53,4.49,Mar
+Louisiana,78,60,4.57,Apr
+Louisiana,85,68,4.57,May
+Louisiana,89,74,7.91,Jun
+Louisiana,91,75,5.98,Jul
+Louisiana,91,75,6.1,Aug
+Louisiana,87,72,5.12,Sep
+Louisiana,80,63,3.54,Oct
+Louisiana,72,53,4.49,Nov
+Louisiana,64,47,5.28,Dec
+Ohio,36,20,9.65,Jan
+Ohio,40,24,6.97,Feb
+Ohio,52,32,6.1,Mar
+Ohio,63,41,3.23,Apr
+Ohio,73,52,3.5,May
+Ohio,82,61,3.98,Jun
+Ohio,85,65,4.06,Jul
+Ohio,84,63,3.11,Aug
+Ohio,77,56,2.64,Sep
+Ohio,65,44,1.65,Oct
+Ohio,52,35,3.82,Nov
+Ohio,41,26,7.4,Dec
+Arizona,67,46,0.91,Jan
+Arizona,71,49,0.91,Feb
+Arizona,77,53,0.98,Mar
+Arizona,85,60,0.28,Apr
+Arizona,95,69,0.12,May
+Arizona,104,78,0.04,Jun
+Arizona,106,83,1.06,Jul
+Arizona,104,83,0.98,Aug
+Arizona,100,77,0.63,Sep
+Arizona,89,65,0.59,Oct
+Arizona,76,53,0.67,Nov
+Arizona,66,45,0.87,Dec
+Maine,28,11,2.6,Jan
+Maine,32,15,2.44,Feb
+Maine,40,23,3.39,Mar
+Maine,53,35,3.78,Apr
+Maine,65,45,3.7,May
+Maine,74,54,3.54,Jun
+Maine,79,60,3.43,Jul
+Maine,78,58,3.31,Aug
+Maine,70,51,3.74,Sep
+Maine,57,40,4.37,Oct
+Maine,45,31,4.37,Nov
+Maine,33,19,3.23,Dec
+Oklahoma,50,29,1.38,Jan
+Oklahoma,55,33,1.57,Feb
+Oklahoma,63,41,3.07,Mar
+Oklahoma,72,50,3.07,Apr
+Oklahoma,80,60,4.65,May
+Oklahoma,88,68,4.92,Jun
+Oklahoma,94,72,2.91,Jul
+Oklahoma,93,71,3.27,Aug
+Oklahoma,85,63,4.06,Sep
+Oklahoma,73,52,3.7,Oct
+Oklahoma,62,40,1.97,Nov
+Oklahoma,51,31,1.89,Dec
+Arkansas,51,32,3.54,Jan
+Arkansas,55,35,3.66,Feb
+Arkansas,64,43,4.65,Mar
+Arkansas,73,51,5.12,Apr
+Arkansas,81,61,4.84,May
+Arkansas,89,69,3.62,Jun
+Arkansas,92,73,3.27,Jul
+Arkansas,93,72,2.6,Aug
+Arkansas,86,65,3.15,Sep
+Arkansas,75,53,4.88,Oct
+Arkansas,63,42,5.28,Nov
+Arkansas,52,34,4.96,Dec
+Maryland,42,29,2.91,Jan
+Maryland,46,31,2.6,Feb
+Maryland,54,39,3.86,Mar
+Maryland,65,48,3.19,Apr
+Maryland,75,57,3.46,May
+Maryland,85,67,3.27,Jun
+Maryland,89,73,4.61,Jul
+Maryland,87,71,3.39,Aug
+Maryland,80,64,4.06,Sep
+Maryland,68,52,3.03,Oct
+Maryland,58,43,2.95,Nov
+Maryland,46,33,3.39,Dec
+Oregon,48,35,5.94,Jan
+Oregon,52,35,4.57,Feb
+Oregon,56,37,3.98,Mar
+Oregon,61,40,2.8,Apr
+Oregon,68,45,2.2,May
+Oregon,74,49,1.54,Jun
+Oregon,82,53,0.47,Jul
+Oregon,82,53,0.43,Aug
+Oregon,77,48,1.3,Sep
+Oregon,64,42,3.03,Oct
+Oregon,53,38,6.5,Nov
+Oregon,46,34,6.85,Dec
+California,54,39,3.62,Jan
+California,60,41,3.46,Feb
+California,65,44,2.76,Mar
+California,71,46,1.14,Apr
+California,80,51,0.67,May
+California,87,56,0.2,Jun
+California,92,58,0.04,Jul
+California,91,58,0.04,Aug
+California,87,56,0.28,Sep
+California,78,50,0.94,Oct
+California,64,43,2.09,Nov
+California,54,38,3.27,Dec
+Massachusetts,36,22,3.35,Jan
+Massachusetts,39,25,3.23,Feb
+Massachusetts,45,31,4.29,Mar
+Massachusetts,56,41,3.74,Apr
+Massachusetts,66,50,3.46,May
+Massachusetts,76,60,3.66,Jun
+Massachusetts,81,65,3.43,Jul
+Massachusetts,80,65,3.27,Aug
+Massachusetts,72,57,3.43,Sep
+Massachusetts,61,47,3.94,Oct
+Massachusetts,51,38,3.98,Nov
+Massachusetts,41,28,3.78,Dec
+Pennsylvania,40,26,3.03,Jan
+Pennsylvania,44,28,2.64,Feb
+Pennsylvania,53,34,3.78,Mar
+Pennsylvania,64,44,3.54,Apr
+Pennsylvania,74,54,3.7,May
+Pennsylvania,83,64,3.43,Jun
+Pennsylvania,87,69,4.33,Jul
+Pennsylvania,85,68,3.5,Aug
+Pennsylvania,78,60,3.78,Sep
+Pennsylvania,67,48,3.19,Oct
+Pennsylvania,56,39,2.99,Nov
+Pennsylvania,45,30,3.54,Dec
+Colorado,45,18,0.39,Jan
+Colorado,46,19,0.35,Feb
+Colorado,54,27,0.91,Mar
+Colorado,61,34,1.69,Apr
+Colorado,72,43,2.13,May
+Colorado,82,52,1.97,Jun
+Colorado,90,59,2.17,Jul
+Colorado,88,57,1.69,Aug
+Colorado,79,48,0.94,Sep
+Colorado,66,37,1.02,Oct
+Colorado,52,25,0.59,Nov
+Colorado,45,18,0.31,Dec
+Michigan,30,17,1.65,Jan
+Michigan,33,19,1.46,Feb
+Michigan,44,26,2.05,Mar
+Michigan,58,37,3.03,Apr
+Michigan,69,47,3.35,May
+Michigan,78,57,3.46,Jun
+Michigan,82,61,2.83,Jul
+Michigan,80,59,3.23,Aug
+Michigan,73,51,3.5,Sep
+Michigan,60,41,2.52,Oct
+Michigan,47,32,2.8,Nov
+Michigan,34,22,1.85,Dec
+Rhode Island,37,21,6.69,Jan
+Rhode Island,40,24,6.89,Feb
+Rhode Island,48,30,8.54,Mar
+Rhode Island,59,40,8.86,Apr
+Rhode Island,68,49,10.0,May
+Rhode Island,78,58,10.75,Jun
+Rhode Island,83,64,11.46,Jul
+Rhode Island,81,63,10.35,Aug
+Rhode Island,74,55,9.21,Sep
+Rhode Island,63,44,8.15,Oct
+Rhode Island,53,36,5.79,Nov
+Rhode Island,42,26,5.83,Dec
+Connecticut,37,23,3.11,Jan
+Connecticut,40,25,2.8,Feb
+Connecticut,47,31,4.06,Mar
+Connecticut,58,41,4.13,Apr
+Connecticut,68,51,3.82,May
+Connecticut,77,60,3.62,Jun
+Connecticut,82,66,3.46,Jul
+Connecticut,81,66,3.98,Aug
+Connecticut,74,58,3.46,Sep
+Connecticut,63,47,3.62,Oct
+Connecticut,53,38,3.39,Nov
+Connecticut,42,28,3.35,Dec
+Minnesota,26,7,0.79,Jan
+Minnesota,31,12,0.67,Feb
+Minnesota,43,24,1.54,Mar
+Minnesota,58,38,2.87,Apr
+Minnesota,71,50,3.7,May
+Minnesota,80,59,4.21,Jun
+Minnesota,85,64,4.41,Jul
+Minnesota,82,62,4.76,Aug
+Minnesota,73,53,3.27,Sep
+Minnesota,59,41,2.91,Oct
+Minnesota,42,27,1.81,Nov
+Minnesota,29,13,1.1,Dec
+South Carolina,56,34,3.54,Jan
+South Carolina,60,37,3.58,Feb
+South Carolina,68,43,3.7,Mar
+South Carolina,76,50,2.6,Apr
+South Carolina,84,60,2.95,May
+South Carolina,90,68,4.69,Jun
+South Carolina,93,72,5.43,Jul
+South Carolina,91,71,5.24,Aug
+South Carolina,85,64,3.5,Sep
+South Carolina,76,52,3.15,Oct
+South Carolina,67,42,2.72,Nov
+South Carolina,58,35,3.19,Dec
+Delaware,43,27,3.43,Jan
+Delaware,47,29,3.07,Feb
+Delaware,55,36,4.29,Mar
+Delaware,66,44,3.9,Apr
+Delaware,75,54,4.25,May
+Delaware,83,63,4.02,Jun
+Delaware,87,68,4.09,Jul
+Delaware,85,67,4.37,Aug
+Delaware,79,60,4.13,Sep
+Delaware,69,49,3.43,Oct
+Delaware,58,40,3.46,Nov
+Delaware,47,31,3.66,Dec
+Mississippi,56,35,4.96,Jan
+Mississippi,60,38,4.76,Feb
+Mississippi,69,45,5.04,Mar
+Mississippi,76,52,4.96,Apr
+Mississippi,83,62,4.37,May
+Mississippi,89,69,4.13,Jun
+Mississippi,92,72,4.8,Jul
+Mississippi,92,71,4.25,Aug
+Mississippi,87,65,3.03,Sep
+Mississippi,77,53,3.94,Oct
+Mississippi,67,44,4.76,Nov
+Mississippi,58,37,5.16,Dec
+South Dakota,22,0,0.47,Jan
+South Dakota,27,5,0.43,Feb
+South Dakota,39,19,1.14,Mar
+South Dakota,57,32,1.81,Apr
+South Dakota,69,45,3.23,May
+South Dakota,78,55,3.39,Jun
+South Dakota,84,60,3.58,Jul
+South Dakota,82,57,2.64,Aug
+South Dakota,72,46,2.4,Sep
+South Dakota,58,33,1.97,Oct
+South Dakota,39,19,0.71,Nov
+South Dakota,25,5,0.43,Dec
+District of Columbia,42,27,3.03,Jan
+District of Columbia,44,28,2.48,Feb
+District of Columbia,53,35,3.23,Mar
+District of Columbia,64,44,3.15,Apr
+District of Columbia,75,54,4.13,May
+District of Columbia,83,63,3.23,Jun
+District of Columbia,87,68,4.13,Jul
+District of Columbia,84,66,4.88,Aug
+District of Columbia,78,59,3.82,Sep
+District of Columbia,67,48,3.07,Oct
+District of Columbia,55,38,2.83,Nov
+District of Columbia,45,29,2.8,Dec
+Missouri,40,21,1.89,Jan
+Missouri,45,25,2.32,Feb
+Missouri,56,33,2.99,Mar
+Missouri,67,44,4.13,Apr
+Missouri,75,54,5.16,May
+Missouri,83,64,4.41,Jun
+Missouri,88,68,4.29,Jul
+Missouri,88,66,4.06,Aug
+Missouri,80,57,4.17,Sep
+Missouri,69,45,3.35,Oct
+Missouri,56,35,3.62,Nov
+Missouri,43,24,2.72,Dec
+Tennessee,50,33,3.98,Jan
+Tennessee,55,36,4.41,Feb
+Tennessee,64,44,5.16,Mar
+Tennessee,73,53,5.51,Apr
+Tennessee,81,62,5.24,May
+Tennessee,89,70,3.62,Jun
+Tennessee,92,74,4.61,Jul
+Tennessee,91,73,2.87,Aug
+Tennessee,85,65,3.07,Sep
+Tennessee,74,54,3.98,Oct
+Tennessee,63,44,5.47,Nov
+Tennessee,52,35,5.75,Dec
+Florida,64,39,4.33,Jan
+Florida,67,42,4.84,Feb
+Florida,74,47,5.94,Mar
+Florida,80,52,3.07,Apr
+Florida,87,62,3.46,May
+Florida,91,69,7.72,Jun
+Florida,92,72,7.17,Jul
+Florida,92,72,7.36,Aug
+Florida,88,68,4.69,Sep
+Florida,81,57,3.23,Oct
+Florida,73,47,3.5,Nov
+Florida,65,41,3.9,Dec
+Montana,33,13,0.35,Jan
+Montana,39,17,0.31,Feb
+Montana,48,24,0.59,Mar
+Montana,58,32,0.98,Apr
+Montana,67,41,1.85,May
+Montana,76,49,2.05,Jun
+Montana,86,54,1.18,Jul
+Montana,85,52,1.18,Aug
+Montana,73,43,1.1,Sep
+Montana,59,33,0.67,Oct
+Montana,43,22,0.47,Nov
+Montana,32,12,0.39,Dec
+Texas,62,42,2.2,Jan
+Texas,65,45,2.01,Feb
+Texas,72,51,2.76,Mar
+Texas,80,59,2.09,Apr
+Texas,87,67,4.37,May
+Texas,92,72,4.33,Jun
+Texas,96,74,1.89,Jul
+Texas,97,75,2.36,Aug
+Texas,91,69,2.99,Sep
+Texas,82,61,3.9,Oct
+Texas,71,51,2.95,Nov
+Texas,63,42,2.4,Dec
+Georgia,52,34,4.21,Jan
+Georgia,57,37,4.69,Feb
+Georgia,64,45,4.8,Mar
+Georgia,72,52,3.35,Apr
+Georgia,81,61,3.66,May
+Georgia,86,68,3.94,Jun
+Georgia,90,72,5.28,Jul
+Georgia,88,72,3.9,Aug
+Georgia,82,64,4.49,Sep
+Georgia,73,54,3.43,Oct
+Georgia,64,43,4.09,Nov
+Georgia,54,36,3.9,Dec
+Nebraska,32,12,0.79,Jan
+Nebraska,37,18,0.79,Feb
+Nebraska,50,28,2.13,Mar
+Nebraska,63,39,2.95,Apr
+Nebraska,73,50,4.45,May
+Nebraska,84,61,3.94,Jun
+Nebraska,88,66,3.86,Jul
+Nebraska,86,64,3.23,Aug
+Nebraska,77,54,3.19,Sep
+Nebraska,64,41,2.2,Oct
+Nebraska,48,28,1.81,Nov
+Nebraska,36,16,0.91,Dec
+Utah,38,26,1.46,Jan
+Utah,44,31,1.5,Feb
+Utah,53,38,2.2,Mar
+Utah,61,43,2.32,Apr
+Utah,71,52,2.09,May
+Utah,82,61,1.14,Jun
+Utah,90,69,0.59,Jul
+Utah,89,67,0.71,Aug
+Utah,78,58,1.54,Sep
+Utah,65,46,1.65,Oct
+Utah,50,36,1.77,Nov
+Utah,40,27,1.61,Dec
+Hawaii,80,66,2.32,Jan
+Hawaii,80,66,2.01,Feb
+Hawaii,81,68,2.01,Mar
+Hawaii,83,69,0.63,Apr
+Hawaii,85,71,0.63,May
+Hawaii,87,73,0.28,Jun
+Hawaii,88,74,0.51,Jul
+Hawaii,89,75,0.55,Aug
+Hawaii,89,74,0.71,Sep
+Hawaii,87,73,1.85,Oct
+Hawaii,84,71,2.4,Nov
+Hawaii,81,68,3.23,Dec
+Nevada,45,22,1.57,Jan
+Nevada,50,25,1.57,Feb
+Nevada,57,30,1.1,Mar
+Nevada,63,34,0.43,Apr
+Nevada,71,41,0.43,May
+Nevada,81,47,0.43,Jun
+Nevada,90,52,0.2,Jul
+Nevada,88,51,0.24,Aug
+Nevada,80,43,0.39,Sep
+Nevada,68,35,0.71,Oct
+Nevada,54,27,1.22,Nov
+Nevada,45,22,1.34,Dec
+Vermont,27,10,2.05,Jan
+Vermont,31,13,1.77,Feb
+Vermont,40,22,2.2,Mar
+Vermont,55,35,2.83,Apr
+Vermont,67,45,3.46,May
+Vermont,76,55,3.7,Jun
+Vermont,81,60,4.17,Jul
+Vermont,79,58,3.9,Aug
+Vermont,70,51,3.62,Sep
+Vermont,57,39,3.58,Oct
+Vermont,46,31,3.15,Nov
+Vermont,33,19,2.36,Dec
+Idaho,38,25,1.22,Jan
+Idaho,45,28,0.98,Feb
+Idaho,55,34,1.38,Mar
+Idaho,62,39,1.22,Apr
+Idaho,72,47,1.38,May
+Idaho,81,54,0.67,Jun
+Idaho,91,60,0.31,Jul
+Idaho,90,60,0.24,Aug
+Idaho,79,51,0.55,Sep
+Idaho,65,41,0.75,Oct
+Idaho,48,32,1.34,Nov
+Idaho,38,24,1.54,Dec
+New Hampshire,31,10,2.72,Jan
+New Hampshire,35,14,2.64,Feb
+New Hampshire,44,22,3.27,Mar
+New Hampshire,57,33,3.43,Apr
+New Hampshire,69,43,3.66,May
+New Hampshire,77,53,3.7,Jun
+New Hampshire,82,58,3.74,Jul
+New Hampshire,81,56,3.19,Aug
+New Hampshire,73,47,3.39,Sep
+New Hampshire,60,36,4.06,Oct
+New Hampshire,48,28,3.7,Nov
+New Hampshire,36,17,3.19,Dec
+Virginia,47,28,3.03,Jan
+Virginia,51,31,2.72,Feb
+Virginia,60,37,4.02,Mar
+Virginia,70,46,3.23,Apr
+Virginia,78,55,3.78,May
+Virginia,86,65,3.9,Jun
+Virginia,90,69,4.49,Jul
+Virginia,88,67,4.65,Aug
+Virginia,81,60,4.09,Sep
+Virginia,71,48,2.95,Oct
+Virginia,61,39,3.23,Nov
+Virginia,51,31,3.23,Dec
+Illinois,32,18,2.05,Jan
+Illinois,36,21,1.93,Feb
+Illinois,46,30,2.72,Mar
+Illinois,59,41,3.62,Apr
+Illinois,70,52,4.13,May
+Illinois,81,63,4.06,Jun
+Illinois,84,68,4.02,Jul
+Illinois,82,66,3.98,Aug
+Illinois,75,57,3.31,Sep
+Illinois,63,46,3.23,Oct
+Illinois,48,34,3.43,Nov
+Illinois,36,23,2.56,Dec
+New Jersey,39,24,3.5,Jan
+New Jersey,42,27,2.87,Feb
+New Jersey,51,34,4.17,Mar
+New Jersey,62,44,4.17,Apr
+New Jersey,72,53,4.06,May
+New Jersey,82,63,4.02,Jun
+New Jersey,86,69,4.72,Jul
+New Jersey,84,67,3.7,Aug
+New Jersey,77,60,3.82,Sep
+New Jersey,65,48,3.58,Oct
+New Jersey,55,39,3.62,Nov
+New Jersey,44,30,3.78,Dec
+Washington,47,37,5.55,Jan
+Washington,50,37,3.46,Feb
+Washington,54,39,3.7,Mar
+Washington,58,42,2.68,Apr
+Washington,65,47,1.93,May
+Washington,70,52,1.54,Jun
+Washington,76,56,0.67,Jul
+Washington,76,56,0.87,Aug
+Washington,71,52,1.42,Sep
+Washington,60,46,3.46,Oct
+Washington,51,40,6.54,Nov
+Washington,46,36,5.31,Dec
+Indiana,35,19,2.72,Jan
+Indiana,40,22,2.28,Feb
+Indiana,51,30,3.19,Mar
+Indiana,63,40,3.78,Apr
+Indiana,73,50,4.76,May
+Indiana,82,59,4.29,Jun
+Indiana,85,63,4.13,Jul
+Indiana,83,61,3.27,Aug
+Indiana,77,53,2.68,Sep
+Indiana,65,42,3.11,Oct
+Indiana,52,33,3.5,Nov
+Indiana,39,23,2.91,Dec
+New Mexico,44,17,0.59,Jan
+New Mexico,48,22,0.51,Feb
+New Mexico,56,26,0.94,Mar
+New Mexico,65,32,0.79,Apr
+New Mexico,74,41,0.94,May
+New Mexico,83,49,1.3,Jun
+New Mexico,86,54,2.32,Jul
+New Mexico,83,53,2.24,Aug
+New Mexico,78,47,1.54,Sep
+New Mexico,67,35,1.34,Oct
+New Mexico,53,25,0.87,Nov
+New Mexico,43,17,0.83,Dec
+West Virginia,42,26,2.99,Jan
+West Virginia,47,29,3.19,Feb
+West Virginia,56,35,3.9,Mar
+West Virginia,68,44,3.23,Apr
+West Virginia,75,53,4.8,May
+West Virginia,82,62,4.29,Jun
+West Virginia,85,66,4.92,Jul
+West Virginia,84,65,3.74,Aug
+West Virginia,78,57,3.27,Sep
+West Virginia,68,45,2.68,Oct
+West Virginia,57,37,3.74,Nov
+West Virginia,46,29,3.27,Dec
+Iowa,31,14,0.91,Jan
+Iowa,36,19,1.26,Feb
+Iowa,49,30,2.24,Mar
+Iowa,62,41,3.86,Apr
+Iowa,72,52,4.72,May
+Iowa,82,62,4.92,Jun
+Iowa,86,67,4.45,Jul
+Iowa,84,65,4.09,Aug
+Iowa,76,55,3.03,Sep
+Iowa,63,43,2.64,Oct
+Iowa,48,31,2.17,Nov
+Iowa,34,18,1.38,Dec
+New York,39,26,3.9,Jan
+New York,42,29,2.95,Feb
+New York,50,35,4.06,Mar
+New York,60,44,3.94,Apr
+New York,71,55,4.45,May
+New York,79,64,3.5,Jun
+New York,85,70,4.53,Jul
+New York,83,69,4.13,Aug
+New York,76,61,3.98,Sep
+New York,65,50,3.39,Oct
+New York,54,41,3.82,Nov
+New York,44,32,3.58,Dec
+Wisconsin,29,16,1.73,Jan
+Wisconsin,33,19,1.61,Feb
+Wisconsin,42,28,2.24,Mar
+Wisconsin,54,37,3.54,Apr
+Wisconsin,65,47,3.39,May
+Wisconsin,75,57,3.9,Jun
+Wisconsin,80,64,3.66,Jul
+Wisconsin,78,63,3.94,Aug
+Wisconsin,71,55,3.15,Sep
+Wisconsin,59,43,2.64,Oct
+Wisconsin,46,32,2.68,Nov
+Wisconsin,33,20,2.01,Dec
+Kansas,40,20,0.87,Jan
+Kansas,45,24,1.34,Feb
+Kansas,56,33,2.48,Mar
+Kansas,67,44,3.54,Apr
+Kansas,76,54,4.92,May
+Kansas,85,64,5.39,Jun
+Kansas,89,68,3.82,Jul
+Kansas,89,66,4.25,Aug
+Kansas,80,56,3.66,Sep
+Kansas,68,45,3.03,Oct
+Kansas,55,33,1.85,Nov
+Kansas,42,22,1.34,Dec
+North Carolina,51,30,3.43,Jan
+North Carolina,55,33,3.31,Feb
+North Carolina,63,39,4.02,Mar
+North Carolina,72,47,3.03,Apr
+North Carolina,79,56,3.19,May
+North Carolina,86,65,3.74,Jun
+North Carolina,89,68,3.66,Jul
+North Carolina,87,67,4.21,Aug
+North Carolina,81,60,3.23,Sep
+North Carolina,72,49,3.39,Oct
+North Carolina,62,39,3.15,Nov
+North Carolina,53,32,3.27,Dec
+Wyoming,40,18,0.31,Jan
+Wyoming,40,19,0.43,Feb
+Wyoming,47,24,1.02,Mar
+Wyoming,55,31,1.77,Apr
+Wyoming,65,40,2.32,May
+Wyoming,75,49,2.32,Jun
+Wyoming,83,56,2.17,Jul
+Wyoming,81,54,1.93,Aug
+Wyoming,72,45,1.46,Sep
+Wyoming,59,34,0.91,Oct
+Wyoming,47,24,0.55,Nov
+Wyoming,38,17,0.47,Dec
