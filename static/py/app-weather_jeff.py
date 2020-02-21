@@ -19,7 +19,7 @@ from flask import Flask, jsonify
 
 # variables to populate the database connection string
 db_user = 'postgres'
-db_password = 'Postgres2019'
+db_password = 'postgres'
 db_host = 'localhost'
 db_port = 5432
 
@@ -35,6 +35,7 @@ Base.prepare(engine, reflect=True)
 
 # Save reference to the table
 WeatherData = Base.classes.weather_data
+CityData = Base.classes.city_data
 
 #################################################
 # Flask Setup
@@ -54,32 +55,6 @@ def welcome():
         f"/api/v1.0/weather/state/<state_name><br/>"
         f"/api/v1.0/weather/all_states<br/>"
     )
-
-
-@app.route("/api/v1.0/weather/state/<state_name>")
-def stateData(state_name):
-    """Return a list of all weather for the state"""
-
-    # Query all passengers
-    session = Session(engine)
-    results = session.query(WeatherData).filter(WeatherData.state==state_name).all()
-
-    # close the session to end the communication with the database
-    session.close()
-
-    # Convert list of tuples into normal list
-#     all_names = list(np.ravel(results))
-    all_data = []
-    for weather in results:
-        weather_dict = {}
-        weather_dict["state"] = weather.state
-        weather_dict["avg_high"] = weather.avg_high
-        weather_dict["avg_low"] = weather.avg_low
-        weather_dict["avg_prec"] = weather.avg_prec
-        weather_dict["month"] = weather.month
-        all_data.append(weather_dict)
-
-    return jsonify(all_data)
 
 
 @app.route("/api/v1.0/weather/all_states")
@@ -107,7 +82,6 @@ def all_states():
 
     return jsonify(all_data)
 
-
 #     return jsonify(all_names)
 
 
@@ -134,6 +108,33 @@ def all_states():
 #         all_passengers.append(passenger_dict)
 
 #     return jsonify(all_passengers)
+
+
+@app.route("/api/v1.0/weather/census_city")
+def census_city():
+    """Return a list of all weather for the state"""
+
+    # Query all passengers
+    session = Session(engine)
+    results = session.query(CityData).all()
+
+    # close the session to end the communication with the database
+    session.close()
+
+    # Convert list of tuples into normal list
+#     all_names = list(np.ravel(results))
+    census_city_data = []
+
+    for city in results:
+        state_dict={'city_state': city.city_state}
+        data_dict={}
+        data_dict["median_income"] = city.median_income
+        data_dict["home_value"] = city.median_value
+        state_dict['data'] = data_dict
+        census_city_data.append(state_dict)
+
+    return jsonify(census_city_data)
+
 
 
 if __name__ == '__main__':
