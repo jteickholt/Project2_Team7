@@ -129,7 +129,34 @@ def census_city():
         state_dict={'city_state': city.city_state}
         data_dict={}
         data_dict["median_income"] = city.median_income
-        data_dict["home_value"] = city.median_value
+        data_dict["mean_income"] = city.mean_income
+        data_dict["median_value"] = city.median_value
+        data_dict["unemployment_rate"] = city.unemployment_rate
+        data_dict["population"] = city.population
+        data_dict["private_auto"] = city.private_auto 
+        data_dict["public_transport"] = city.public_transport 
+        data_dict["walks"] = city.walks 
+        data_dict["bike"] = city.bike
+        data_dict["other"] = city.other 
+        data_dict["works_home"] = city.works_home
+        data_dict["total_population_over_25_years_old"] = city.total_population_over_25_years_old
+        data_dict["less_than_9th_grade"] = city.less_than_9th_grade
+        data_dict["grade_9th_to_12th_no_diploma"] = city.grade_9th_to_12th_no_diploma
+        data_dict["high_school_diploma"] = city.high_school_diploma
+        data_dict["some_college_no_degree"] = city.some_college_no_degree
+        data_dict["associate_degree"] = city.associate_degree
+        data_dict["bachelor_degree"] = city.bachelor_degree
+        data_dict["graduate_proffesional_degree"] = city.graduate_proffesional_degree
+        data_dict["high_school_graduate_or_higher"] = city.high_school_graduate_or_higher
+        data_dict["bachelor_degree_or_higher"] = city.bachelor_degress_or_higher
+        data_dict["white"] = city.white
+        data_dict["black_african_american"] = city.black_african_american
+        data_dict["american_indian_alaska_native"] = city.american_indian_alaska_native
+        data_dict["asian"] = city.asian
+        data_dict["some_other_race"] = city.some_other_race
+        data_dict["hispanic_latino"] = city.hispanic_latino
+
+        
         state_dict['data'] = data_dict
         census_city_data.append(state_dict)
 
