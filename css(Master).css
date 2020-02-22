@@ -1,0 +1,70 @@
+#searchengine{
+    background-color:orange;
+    padding: 2px;
+ 
+
+}
+
+#totalpage{
+    background-color: rgb(219, 219, 219);
+}
+
+/* #totalpage1{
+    background-color: rgb(219, 219, 219);
+    padding-bottom: 20px;
+} */
+
+
+/* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 130px;
+    overflow: auto;
+  }
+
+
+
+.page-title{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    background-color:orange;
+    font-size: x-large;
+    position: absolute;
+    box-sizing: content-box;
+    font-weight: bold;
+}
+
+
+.subpage1-title1{
+    color: orangered;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: white;
+
+
+}
+
+/* h1{
+
+    font-size: medium;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 25px;
+    text-align: justify;
+    text-justify: inter-word;
+} */
+
+.subpage1-title2{
+    color: orangered;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: white;
+
+
+}
+
+.page2-plot-titles{
+    font-weight: bold;
+}
