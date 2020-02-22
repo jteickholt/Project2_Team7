@@ -20,7 +20,8 @@ from flask_cors import CORS, cross_origin
 
 # variables to populate the database connection string
 db_user = 'postgres'
-db_password = 'Postgres2019'
+# db_password = 'Postgres2019'
+db_password = 'postgres'
 db_host = 'localhost'
 db_port = 5432
 
@@ -202,20 +203,21 @@ def census_city():
         data_dict["works_home"] = city.works_home
         data_dict["total_population_over_25_years_old"] = city.total_population_over_25_years_old
         data_dict["less_than_9th_grade"] = city.less_than_9th_grade
-        # data_dict["grade_9th_to_12th_no_diploma"] = city._9th_to_12th_no_diploma
+        data_dict["grade_9th_to_12th_no_diploma"] = city.grade_9th_to_12th_no_diploma
         data_dict["high_school_diploma"] = city.high_school_diploma
-        # data_dict["some_college_no_degree"] = city.some_college_no_degree
-        # data_dict["associate_degree"] = city.associate_degree
-        # data_dict["bachelor_degree"] = city.bachelor_degree
-        # data_dict["graduate_proffesional_degree"] = city.graduate_proffesional_degree
-        # data_dict["high_school_graduate_or_higher"] = city.high_school_graduate_or_higher
-        # data_dict["bachelor_degree_or_higher"] = city.bachelor_degress_or_higher
-        # data_dict["white"] = city.white
-        # data_dict["black_african_american"] = city.black_african_american
-        # data_dict["american_indian_alaska_native"] = city.american_indian_alaska_native
-        # data_dict["asian"] = city.asian
-        # data_dict["some_other_race"] = city.some_other_race
-        # data_dict["hispanic_latino"] = city.hispanic_latino
+        data_dict["some_college_no_degree"] = city.some_college_no_degree
+        data_dict["associate_degree"] = city.associate_degree
+        data_dict["bachelor_degree"] = city.bachelor_degree
+        data_dict["graduate_proffesional_degree"] = city.graduate_proffesional_degree
+        data_dict["high_school_graduate_or_higher"] = city.high_school_graduate_or_higher
+        data_dict["bachelor_degree_or_higher"] = city.bachelor_degree_or_higher
+        data_dict["white"] = city.white
+        data_dict["black_african_american"] = city.black_african_american
+        data_dict["american_indian_alaska_native"] = city.american_indian_alaska_native
+        data_dict["asian"] = city.asian
+        data_dict["some_other_race"] = city.some_other_race
+        data_dict["hispanic_latino"] = city.hispanic_latino
+        data_dict["state"] = city.state
 
         
         state_dict['data'] = data_dict
