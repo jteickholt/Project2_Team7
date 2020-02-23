@@ -1,31 +1,56 @@
 #searchengine{
-    background-color:orange;
-    padding: 2px;
- 
+    background-color:white;
+    padding: 1px;
+    position: relative;
+    background-size: cover;
 
 }
 
+.intro {
+    position: relative;
+    height: 550px;
+    margin: 0;
+    background: black;
+    background-image: url("shutterstock_1486328387.jpg");
+    background-attachment: fixed;
+    background-position: bottom center;
+    background-size: cover;
+    font-size: x-large;
+  }
+    
+
+
+
 #totalpage{
-    background-color: rgb(219, 219, 219);
+    background-color: rgb(6, 38, 53);
+    margin-right:0;
+    margin-left: 0;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    background-size: cover;
 }
 
 /* #totalpage1{
     background-color: rgb(219, 219, 219);
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 } */
 
 
-/* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
-.wrapper {
+.row{
+    color: white;
+    font-size: x-large;
+    margin-right:0;
+    margin-left: 0;
     position: relative;
-    min-height: 100%;
-    padding-bottom: 130px;
-    overflow: auto;
-  }
+    /* font-family: Arial, Helvetica, sans-serif; */
+    text-align: center;
+    /* background-color: white; */
 
 
 
-.page-title{
+/* .page-title{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
     background-color:orange;
@@ -33,10 +58,10 @@
     position: absolute;
     box-sizing: content-box;
     font-weight: bold;
-}
+} */
 
 
-.subpage1-title1{
+/* .subpage1-title1{
     color: orangered;
     font-size: x-large;
     font-family: Arial, Helvetica, sans-serif;
@@ -44,7 +69,7 @@
     background-color: white;
 
 
-}
+} */
 
 /* h1{
 
@@ -55,7 +80,7 @@
     text-justify: inter-word;
 } */
 
-.subpage1-title2{
+/* .subpage1-title2{
     color: orangered;
     font-size: x-large;
     font-family: Arial, Helvetica, sans-serif;
@@ -63,8 +88,8 @@
     background-color: white;
 
 
-}
-
+} */
+/* 
 .page2-plot-titles{
     font-weight: bold;
-}
+} */
