@@ -19,7 +19,7 @@ from flask import Flask, jsonify
 
 # variables to populate the database connection string
 db_user = 'postgres'
-db_password = 'Postgres2019'
+db_password = 'postgres'
 db_host = 'localhost'
 db_port = 5432
 
