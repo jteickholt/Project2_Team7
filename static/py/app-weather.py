@@ -20,8 +20,8 @@ from flask_cors import CORS, cross_origin
 
 # variables to populate the database connection string
 db_user = 'postgres'
-# db_password = 'Postgres2019'
-db_password = 'postgres'
+db_password = 'Postgres2019'
+# db_password = 'postgres'
 db_host = 'localhost'
 db_port = 5432
 
@@ -142,34 +142,6 @@ def all_states():
 
     return jsonify(all_data)
 
-
-#     return jsonify(all_names)
-
-
-# @app.route("/api/v1.0/passengers")
-# def passengers():
-#     """Return a list of passenger data including the name, age, and sex of each passenger"""
-
-#     # Open a communication session with the database
-#     session = Session(engine)
-
-#     # Query all passengers
-#     results = session.query(Passenger).all()
-
-#     # close the session to end the communication with the database
-#     session.close()
-
-#     # Create a dictionary from the row data and append to a list of all_passengers
-#     all_passengers = []
-#     for passenger in results:
-#         passenger_dict = {}
-#         passenger_dict["name"] = passenger.name
-#         passenger_dict["age"] = passenger.age
-#         passenger_dict["sex"] = passenger.sex
-#         all_passengers.append(passenger_dict)
-
-#     return jsonify(all_passengers)
-
 @app.route("/api/v1.0/weather/census_city")
 @cross_origin()
 def census_city():
@@ -190,6 +162,7 @@ def census_city():
         state_dict={'city_state': city.city_state}
         data_dict={}
         # print(city)
+        data_dict["geo_id"] = city.geo_id
         data_dict["median_income"] = city.median_income
         data_dict["mean_income"] = city.mean_income
         data_dict["median_value"] = city.median_value
@@ -203,7 +176,7 @@ def census_city():
         data_dict["works_home"] = city.works_home
         data_dict["total_population_over_25_years_old"] = city.total_population_over_25_years_old
         data_dict["less_than_9th_grade"] = city.less_than_9th_grade
-        data_dict["grade_9th_to_12th_no_diploma"] = city.grade_9th_to_12th_no_diploma
+        # data_dict["grade_9th_to_12th_no_diploma"] = city.grade_9th_to_12th_no_diploma
         data_dict["high_school_diploma"] = city.high_school_diploma
         data_dict["some_college_no_degree"] = city.some_college_no_degree
         data_dict["associate_degree"] = city.associate_degree
@@ -217,7 +190,7 @@ def census_city():
         data_dict["asian"] = city.asian
         data_dict["some_other_race"] = city.some_other_race
         data_dict["hispanic_latino"] = city.hispanic_latino
-        data_dict["state"] = city.state
+        # data_dict["state"] = city.state
 
         
         state_dict['data'] = data_dict
