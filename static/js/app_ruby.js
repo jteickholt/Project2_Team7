@@ -1,13 +1,3 @@
-// @TODO: YOUR CODE HERE!
-// var svgWidth = 960;
-// var svgHeight = 500;
-
-// var margin = {
-//   top: 20,
-//   right: 40,
-//   bottom: 60,
-//   left: 100
-// };
 
 function setSelectStates(states) {
   var sel = document.getElementById('selState');
@@ -23,7 +13,6 @@ function setSelectStates(states) {
     sel.appendChild(opt); 
     
   });
-
 }
 
 var statelatLong;
@@ -69,61 +58,61 @@ function stateSelected(stateName) {
     precArray.push(data.avg_prec);
     });
     console.log("hello", weatherData);
+   
+
+    // Create our first trace
+    var trace1 = {
+      x: monthArray,
+      y: maxArray,
+      type: 'scatter',
+      name: "Max Temp",
+      marker: {
+        color: 'rgb(255,0,0)'
+      }
+    };
+
+    // Create our second trace 
+    var trace2 = {
+      x: monthArray,
+      y: minArray,
+      type: 'scatter',
+      name: "Min Temp",
+      marker: {
+        color: 'rgb(0,0,255)'
+      }
+    };
+
+    // Create our third trace 
+    var trace3 = {
+      x: monthArray,
+      y: precArray,
+      color: "red",
+      yaxis: 'y2',
+      // showInLegend: true,
+      type: 'bar',
+      name: "Precipitation",
+      marker: {
+        color: 'rgb(82,215,255)'
+      }
+  };
+    // The data array consists of all 3 traces
+    var data = [trace1, trace2, trace3];
 
 
-        // Create our first trace
-        var trace1 = {
-          x: monthArray,
-          y: maxArray,
-          type: 'scatter',
-          name: "Max Temp",
-          marker: {
-            color: 'rgb(255,0,0)'
-          }
-        };
-    
-        // Create our second trace 
-        var trace2 = {
-          x: monthArray,
-          y: minArray,
-          type: 'scatter',
-          name: "Min Temp",
-          marker: {
-            color: 'rgb(0,0,255)'
-          }
-        };
-    
-        // Create our third trace 
-        var trace3 = {
-          x: monthArray,
-          y: precArray,
-          color: "red",
-          yaxis: 'y2',
-          // showInLegend: true,
-          type: 'bar',
-          name: "Precipitation",
-          marker: {
-            color: 'rgb(82,215,255)'
-          }
-      };
-        // The data array consists of all 3 traces
-        var data = [trace1, trace2, trace3];
-    
-    
-        var layout = {
-          title: "Climate Chart",
-          xaxis: { title: "Month" },
-          yaxis: { title: "Temperature (F)", range: [0, 110], autorange: false},
-          yaxis2: {
-            title: 'Precipitation in Inches',
-            // titlefont: {color: '#ff7f0e'},
-            // tickfont: {color: '#ff7f0e'},
-            anchor: 'free',
-            overlaying: 'y',
-            side: 'right',
-            position: 1, range: [0, 10], autorange: false
-          }
-        }; 
+    var layout = {
+      title: "Climate Chart",
+      xaxis: { title: "Month" },
+      yaxis: { title: "Temperature (F)", range: [0, 110], autorange: false},
+      yaxis2: {
+        title: 'Precipitation in Inches',
+        // titlefont: {color: '#ff7f0e'},
+        // tickfont: {color: '#ff7f0e'},
+        anchor: 'free',
+        overlaying: 'y',
+        side: 'right',
+        position: 1, range: [0, 10], autorange: false
+      }
+    }; 
    
     Plotly.newPlot('lineChart', data, layout);
   }); 
@@ -139,8 +128,8 @@ d3.json("http://127.0.0.1:5000/api/v1.0/stateList").then(function(states) {
 
 // Creating map object
 var myMap = L.map('map', {
-  center: [38, -100],
-  zoom: 4
+  center: [40.0522, -100.2437],
+  zoom: 3.50
 });
 
 // Adding tile layer
