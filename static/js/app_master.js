@@ -1,3 +1,57 @@
+////////////////////////////////////////////////////////////////////////////////////////
+///  The following code will populate the city dropdown based on the state chosen
+///////////////////////////////////////////////////////////////////////////////////////
+
+
+var city_url = "http://localhost:5000/api/v1.0/weather/census_city"
+
+function popCityDrop(stateChosen) {
+  d3.json(city_url).then(function(data) {
+    var cityData = data;
+
+    // Filter the list of cities based on the state chosen
+    if (stateChosen === "Select") {
+        filteredState = cityData
+    }
+    else {
+      var filteredState = cityData.filter(cityData => cityData.data.state === stateChosen);
+    }
+
+    filteredState.sort(function(a, b){
+      return a.city_state - b.city_state;
+    });
+    
+    // Get the element id for the city dropdown
+    var sel = document.getElementById('selCity');
+
+    // clear out any data that was already there
+    sel.innerHTML="";
+
+    // sort the list of cities
+  
+
+    // iterate through the filtered list of cites and add the cities to the dropdown
+    filteredState.forEach(function(item) {
+      var cityList = item.city_state;
+
+      // create new option element
+      var opt = document.createElement('option');
+      // create text node to add to option element (opt)
+      opt.appendChild( document.createTextNode(item.city_state) );
+      // set value property of opt
+      opt.value = item.city_state; 
+      // add opt to end of select box (sel)
+      sel.appendChild(opt); 
+    });
+    
+  });
+
+}
+
+
+
+
+//////////////////////////////////////////////////////////////
 // State selection dropdown
 /////////////////////////////////////////////////////////////
 
@@ -36,7 +90,7 @@ function stateSelected(stateName) {
     }
   });
   console.log('state abbr found', stateAbbr);
-
+  
   
   // lets see if we have the state then we zoom to that and change the level
   statelatLong.forEach(function(data) {
@@ -44,6 +98,9 @@ function stateSelected(stateName) {
         myMap.flyTo([data.Latitude, data.Longitude], 6)
       }
     });
+
+  
+
 
 
 /////////////////////////////////////////////////////
@@ -123,7 +180,11 @@ function stateSelected(stateName) {
         }; 
    
     Plotly.newPlot('lineChart', data, layout);
-  }); 
+  });
+  
+  // Call the popCityDrop function that will populate the city dropdown list based on the 
+  // state chosen in the state dropdow list
+  popCityDrop(stateName);
 }
 
 var statesList;
@@ -217,6 +278,22 @@ function loadState() {
     });
 }
 loadState();
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+/// Will need to include all of the city plot data in this function that is called
+/// when the city drop-down is changed
+//////////////////////////////////////////////////////////////////////////////////////
+
+function citySelected(cityName) {
+  console.log(cityName);
+
+
+}
+
 
 
 

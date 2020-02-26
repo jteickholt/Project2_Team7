@@ -70,16 +70,11 @@
       <div class="col-sm-4">
         <aside class="filters">
           <div class="panel panel-default">
-            <div class="panel-heading">Filter Search</div>
+            <div class="panel-heading">Search for City</div>
             <div class="panel-body">
               <form>
-                <div class="form-group">
-                  <ul class="list-group" id="filters">
-                    <li class="filter list-group-item">
-                      <label for="city">Enter a City</label>
-                      <input class="form-control" id="filterCity" type="text" placeholder="ccccc">
-                    </li>
-                  </ul>
+                  <select id="selCity" data-live-search="true" onchange="citySelected(this.value)">
+                </select>
               </form>
             </div>
           </div>
@@ -236,9 +231,10 @@ sl
 <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<script type="text/javascript" src="static/js/app_master_commute.js"></script>
+<!-- <script type="text/javascript" src="static/js/app_master_commute.js"></script>
 <script type="text/javascript" src="static/js/app_master_diver_edu.js"></script>
-<script type="text/javascript" src="static/js/app_master_weather.js"></script>
+<script type="text/javascript" src="static/js/app_master_weather.js"></script> -->
+<script type="text/javascript" src="static/js/app_master.js"></script>
 
   </body>
 </html>

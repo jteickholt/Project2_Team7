@@ -161,7 +161,6 @@ def census_city():
     for city in results:
         state_dict={'city_state': city.city_state}
         data_dict={}
-        # print(city)
         data_dict["geo_id"] = city.geo_id
         data_dict["median_income"] = city.median_income
         data_dict["mean_income"] = city.mean_income
@@ -176,7 +175,7 @@ def census_city():
         data_dict["works_home"] = city.works_home
         data_dict["total_population_over_25_years_old"] = city.total_population_over_25_years_old
         data_dict["less_than_9th_grade"] = city.less_than_9th_grade
-        # data_dict["grade_9th_to_12th_no_diploma"] = city.grade_9th_to_12th_no_diploma
+        data_dict["grade_9th_to_12th_no_diploma"] = city.grade_9th_to_12th_no_diploma
         data_dict["high_school_diploma"] = city.high_school_diploma
         data_dict["some_college_no_degree"] = city.some_college_no_degree
         data_dict["associate_degree"] = city.associate_degree
@@ -190,7 +189,7 @@ def census_city():
         data_dict["asian"] = city.asian
         data_dict["some_other_race"] = city.some_other_race
         data_dict["hispanic_latino"] = city.hispanic_latino
-        # data_dict["state"] = city.state
+        data_dict["state"] = city.state
 
         
         state_dict['data'] = data_dict
