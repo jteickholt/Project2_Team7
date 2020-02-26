@@ -21,7 +21,7 @@
 
 1. Main folder contains:
   a.  index_master.html:  html code that creates the dashboard page.
-  b.  
+  b.  Dashboard_Preview.pptx:  This was the example that we developed as part of the original proposal;
 
 
 
