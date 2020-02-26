@@ -23,7 +23,15 @@
   1.  index_master.html:  html code that creates the dashboard page.
   2.  Dashboard_Preview.pptx:  This was the example that we developed as part of the original proposal;
 
+#### statis/py folder contains:
 
+#### static/js folder contains:
+
+#### static/data folder contains:
+
+#### static/data/cleaned folder contains:
+
+#### static/css folder contains:
 
 
 ### Original Proposal
