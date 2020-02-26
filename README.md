@@ -17,7 +17,11 @@
 5.  Our dashboard had a total of 6 different views of the data.
 
 
+### Repo Contents:
 
+1. Main folder contains:
+  a.  index_master.html:  html code that creates the dashboard page.
+  b.  
 
 
 
