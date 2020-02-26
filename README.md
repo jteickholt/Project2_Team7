@@ -32,6 +32,9 @@
   5. weather_data_ruby.ipynb:  This is the notebook that Ruby used to scrape weather data a the state level, process, and output a csv file that is used in census_data_prep_jeff.ipynb.
 
 #### static/js folder contains:
+  1.  app_master.js:  This is the final javascript file that contains all the the code to create the visualizations. This final version was compiled from indiducal js scripts developed by each team member.
+  2. config.js:  File used to store key for mapbox map.
+  3. shp.min.js:  This file contains coordinates that were used to create the map.
 
 #### static/data folder contains:
 
