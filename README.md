@@ -26,7 +26,7 @@
 #### statis/py folder contains:
   1. app-weather.py:  This is the Flask application that brings in the data from the PostgreSQL database and publishes as an API in JSON format.
   2. census_data_prep_jeff.ipynb:  This is the file that Jeff used to read in census data on commuting, median income, and population and clean up.  This file also reads in census data on education and diversity which Luis processed and data on home value and weather that Ruby processed, and output final cleaned data that is output to the database in file described below. 
-  3.  create_db_jeff.ipynb:  This file reads in the clean data and outputs to a PostgreSQL database.  Note that the database with name shown in the notebook has to first be created in PostgreSQL, but no tables or data need to be added.  This notebook will create the tables and populate the database.
+  3.  create_db_jeff.ipynb:  This file reads in the clean data and outputs to a PostgreSQL database.  Some renaming of variables was also included.  Note that the database with name city_state_data_db has to first be created in PostgreSQL, but no tables or data need to be added.  This notebook will create the tables and populate the database.
   4.  create_db_ruby.ipynb:  This is a copy of create_db_jeff.ipynb that Ruby used to create a copy of the database.  She was not able ot use create_db_jeff, due to different password.
   4.  div_edu_las.ipynb:  This is the notebook Luis used to read in a process the census data on education and diversity.  It then outputs a csv file that is used in census_data_prep_jeff.ipynb.
   5. weather_data_ruby.ipynb:  This is the notebook that Ruby used to scrape weather data a the state level, process, and output a csv file that is used in census_data_prep_jeff.ipynb.
@@ -39,6 +39,10 @@
 #### static/data folder contains:
 
 #### static/data/cleaned folder contains:
+  1.  master_city_data.csv:  This file contains all of the census data at the city level after it was processed and cleaned.  This file was then read into create_db_jeff.ipynb and output to city_data table in the database.
+  2. master_mapping_data.csv:  This file contains the state name and two letter state abbreviation. It was needed, as some data sourced had the full name, but others just had the two letter abbreviation.  This file was then read into create_db_jeff.ipynb and output to mapping_data table in the database.
+  3.  master_state_data.csv:  This file contains all of the census data at the state level after it was processed and cleaned.  This file was then read into create_db_jeff.ipynb and output to state_data table in the database.
+  4.  master_weather_data.csv:  This data contains all of the weather data at the state level after it was processed and cleaned. This file was then read into create_db_jeff.ipynb and output to weather_data table in the database.
 
 #### static/css folder contains:
 
