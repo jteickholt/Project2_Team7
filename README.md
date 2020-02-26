@@ -4,15 +4,15 @@
 
 #### Project Title: Do you want to relocate to ...?
 
-### Description:  We created an interactive dashboard that allowed the uses to view some key informaton about a chosen city in the United States.  To make the interaction more manageable, we allow the user to first choose the state that they are interested in through a standard drop-down list.  Based on the state chosen, a second drop-down is populated with the city available for that state.  This drop-down is searchable, so the user can type the first letter of the city to quickly find the city of interest.  We originally had planned to allow the user to view state or city data, but we eventually decided to focus on just the city.  Below is a quick description of how this project met the project requirements.  Our original proposal is included at the very bottom of this readme.
+### Description:  We created an interactive dashboard that allowed the uses to view some key informaton about a chosen city in the United States.  To make the interaction more manageable, we allow the user to first choose the state that they are interested in through a standard drop-down list.  Based on the state chosen, a second drop-down is populated with the cities available for that state.  This drop-down is searchable, so the user can type the first letter of the city to quickly find the city of interest.  We originally had planned to allow the user to view state or city data, but we eventually decided to focus on just the city.  Below is a quick description of how this project met the project requirements.  Our original proposal is included at the very bottom of this readme.
 
 1.  We input data from the Census American Community Survey from csv files at the city and state level.  We also obtained weather data though webscraping at the state level only, as it was not easily available at the city level.  This data was processed and then output to a PostgreSQL datebase.  The data from the database was then accessed by a Flask application, which had several routes and published the necessary data in a JSON format.
 
 2.  We created an interactive dashboard using the data from the Flask application and javascript code.  The visualizations on the page update based on the city chosen.
 
-3.  We used a new libary call numbers.js (http://numeraljs.com/).  This libary was used to apply formatting to numeric data that we presented on the dashboard, such as presenting numbers as a percentages or as currency.
+3.  We used a new libary call numeral.js (http://numeraljs.com/).  This libary was used to apply formatting to numeric data that we presented on the dashboard, such as presenting numbers as a percentages or as currency.
 
-4.  Our city level data had a total of 519 cities to choose from.  These are based on the metropolitan statistical area, which is census bureau definition, and include metroppolitan areas with a population greater than 50,000.
+4.  Our city level data had a total of 519 cities to choose from.  These are based on the metropolitan statistical area, which is a census bureau definition, and include metropolitan areas with a population greater than 50,000.
 
 5.  Our dashboard had a total of 6 different views of the data.
 
@@ -45,6 +45,8 @@
   4.  master_weather_data.csv:  This data contains all of the weather data at the state level after it was processed and cleaned. This file was then read into create_db_jeff.ipynb and output to weather_data table in the database.
 
 #### static/css folder contains:
+  1.  css_master.css:  Contains syling that is applied to index_master.html;
+  2.  shutterstock_1486328387.jpg:  Picture that is displayed at the top of our website.
 
 
 ### Original Proposal
