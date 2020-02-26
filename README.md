@@ -1,12 +1,12 @@
 # Project2_Team7
 
-### Team Members:  Ruby Mittal, Luis Santana, Jeff Eickholt
+#### Team Members:  Ruby Mittal, Luis Santana, Jeff Eickholt
 
-### Project Title: Do you want to relocate to ...?
+#### Project Title: Do you want to relocate to ...?
 
-### Description:  We created an interactive dashboard that allowed the uses to view some key informaton about a chosen city in the United States.  There are a total of 519 cities available.  To make the interaction more manageable, we allow the user to first choose the state that they are interested in through a standard drop-down list.  Based on the state chosen, a second drop-down is populated with the city available for that state.  This drop-down is searchable, so the user can type the first letter of the city to quickly find the city of interest.  Below is a quick description of how this project met the project requirements.
+### Description:  We created an interactive dashboard that allowed the uses to view some key informaton about a chosen city in the United States.  There are a total of 519 cities available.  To make the interaction more manageable, we allow the user to first choose the state that they are interested in through a standard drop-down list.  Based on the state chosen, a second drop-down is populated with the city available for that state.  This drop-down is searchable, so the user can type the first letter of the city to quickly find the city of interest.  We originally had planned to allow the user to view state or city data, but we eventually decided to focus on just the city.  Below is a quick description of how this project met the project requirements.
 
-1.  We input data from the Census American Community Survey from csv files at the city and state level.  We also obtained weather data though webscraping at the state level.  This data was processed and then output to a PostgreSQL datebase.  The data from the database was then accessed by a Flask application, which had several routes and published the necessary data in a JSON format.
+1.  We input data from the Census American Community Survey from csv files at the city and state level.  We also obtained weather data though webscraping at the state level only, as it was not easily available at the city level.  This data was processed and then output to a PostgreSQL datebase.  The data from the database was then accessed by a Flask application, which had several routes and published the necessary data in a JSON format.
 
 2.  We created an interactive dashboard using the data from the Flask application and javascript code.
 
