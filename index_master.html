@@ -105,12 +105,12 @@
         <div class="row">
           <!-- <div class="col-md-1"></div> -->
           <div class="col-sm-6">
-              <div class="box subpage1-title1" >Key Information</div>
+              <div class="box subpage1-title1" >State and Metropolitan Areas Map </div>
           
           </div>
           
           <div class="col-sm-6">
-              <div class="box subpage1-title2" >State / City Map</div>
+              <div class="box subpage1-title2" >State Average Weather</div>
           </div>
           </div>
         </div>
@@ -121,14 +121,14 @@
         <!-- Key Information PLot -->
           <div class="col-sm-1"> 
           </div>
-                <div class="col-sm-4" id="keyInfo">
+                <div class="col-sm-4" id="map">
           
           </div>
         <!-- State / City Map  -->
         <div class="col-sm-1"> 
         </div>
 
-          <div class="col-sm-5" id="map">
+          <div class="col-sm-5" id="lineChart">
           
           
           </div>  
@@ -144,7 +144,7 @@
   <div class="row">
     <!-- <div class="col-md-1"></div> -->
     <div class="col-sm-6">
-        <div class="box subpage1-title1" >Weather (Temperature Max/Min)</div>
+        <div class="box subpage1-title1" >City Summary</div>
     
     </div>
     
@@ -160,16 +160,16 @@ sl
   <div class="row">
 
         <!-- Weather PLot -->
-        <div class="col-sm-1"> 
+        <div class="col-md-1"> 
         </div>
-              <div class="col-sm-4" id="lineChart">
+              <div class="col-md-4" id="keyInfo">
           
         </div>
         <!-- Commute PLot -->
-        <div class="col-sm-2"> 
+        <div class="col-md-1"> 
         </div>
 
-        <div class="col-sm-4" id="commute">
+        <div class="col-md-4" id="commute">
            
         
         </div>
@@ -187,12 +187,12 @@ sl
   <div class="row">
     <!-- <div class="col-md-1"></div> -->
     <div class="col-sm-6">
-        <div class="box subpage1-title1" >Diversity</div>
+        <div class="box subpage1-title1" >Education Level</div>
     
     </div>
     
     <div class="col-sm-6">
-        <div class="box subpage1-title2" >Education Level</div>
+        <div class="box subpage1-title2" >Diversity</div>
     </div>
     </div>
   </div>
@@ -204,14 +204,14 @@ sl
     <!-- Diversity PLot -->
         <div class="col-md-1"> 
         </div>
-              <div class="col-md-4" id="diversity">
+              <div class="col-md-4" id="eduLevel">
            
         </div>
     <!-- Education Level -->
         <div class="col-md-1"> 
         </div>
 
-        <div class="col-md-4" id="eduLevel">
+        <div class="col-md-4" id="diversity">
            
         
         </div>
@@ -233,14 +233,12 @@ sl
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-
-  
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  
-  
-  
-  <script type="text/javascript" src="static/js/app_master.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript" src="static/js/app_master_commute.js"></script>
+<script type="text/javascript" src="static/js/app_master_diver_edu.js"></script>
+<script type="text/javascript" src="static/js/app_master_weather.js"></script>
 
   </body>
 </html>

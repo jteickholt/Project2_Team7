@@ -118,8 +118,10 @@ function stateSelected(stateName) {
             anchor: 'free',
             overlaying: 'y',
             side: 'right',
-            position: 1, range: [0, 10], autorange: false
-          }
+            position: 1, range: [0, 10], autorange: true
+          },
+          plot_bgcolor: "rgb(6, 38, 53)",
+          paper_bgcolor:"rgb(6, 38, 53)"
         }; 
    
     Plotly.newPlot('lineChart', data, layout);
@@ -220,9 +222,9 @@ loadState();
 
 
 
-// ///////////////////////////////////////////////////////////////////////////////////////////////////////
-// /// This section bring in the city level data and filters for the chosen city
-// ///////////////////////////////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////
+// //This section bring in the city level data and filters for the chosen city
+// /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // var city_url = "http://localhost:5000/api/v1.0/weather/census_city"
 
@@ -243,5 +245,4 @@ loadState();
 //   console.log(filteredData);
 
 
-
-
+// });

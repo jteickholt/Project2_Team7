@@ -47,8 +47,10 @@
     /* font-family: Arial, Helvetica, sans-serif; */
     text-align: center;
     /* background-color: white; */
-
-
+}
+#keyInfo{
+    color: orange;
+}
 
 /* .page-title{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
