@@ -1,5 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////
-///  The following code will populate the city dropdown based on the state chosen
+///  The following code will populate the city dropdown based on the state chosen.
+///  It is called for the stateSelected function which is in turn called when
+///  someone click on a new state in the state dropdown on the application page.
 ///////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -29,10 +31,17 @@ function popCityDrop(stateChosen) {
 
     // sort the list of cities
   
+    var firstOne = true;
 
-    // iterate through the filtered list of cites and add the cities to the dropdown
+    // iterate through the filtered list of cites and add the cities to the dropdown.
+    // Also, run the citySelected function with the first city on the list so the charts are populated
+    // with the first city as a default.
     filteredState.forEach(function(item) {
       var cityList = item.city_state;
+      if (firstOne){
+        citySelected(item.city_state);
+        firstOne = false;
+      }
 
       // create new option element
       var opt = document.createElement('option');
@@ -50,9 +59,8 @@ function popCityDrop(stateChosen) {
 
 
 
-
 //////////////////////////////////////////////////////////////
-// State selection dropdown
+// State selection dropdown - populates the state selection dropdown
 /////////////////////////////////////////////////////////////
 
 
@@ -72,12 +80,18 @@ function setSelectStates(states) {
   });
 
 }
-
+// Bring in the state latitude and longitude for the chart
 var statelatLong;
 d3.csv('static/data/state_lat_long.csv').then(function(data) {
   statelatLong = data;
-  console.log(statelatLong);
+  // console.log(statelatLong);
 })
+
+//////////////////////////////////////////////////////////////////////////////////
+// This function is activated when someone selects a new state from the dropdown.
+// This contains the code to generate the map as well as the weather plot at
+// the state level.  So anytime a new state is chosen, new plots are generated.
+//////////////////////////////////////////////////////////////////////////////////
 
 function stateSelected(stateName) {
   url = "http://127.0.0.1:5000/api/v1.0/weather/state/" + stateName;
@@ -89,7 +103,7 @@ function stateSelected(stateName) {
       stateAbbr = state.state_abbr;
     }
   });
-  console.log('state abbr found', stateAbbr);
+  // console.log('state abbr found', stateAbbr);
   
   
   // lets see if we have the state then we zoom to that and change the level
@@ -122,7 +136,7 @@ function stateSelected(stateName) {
     maxArray.push(data.avg_high);
     precArray.push(data.avg_prec);
     });
-    console.log("hello", weatherData);
+    // console.log("hello", weatherData);
 
 
         // Create our first trace
@@ -208,7 +222,9 @@ function stateSelected(stateName) {
   
   // Call the popCityDrop function that will populate the city dropdown list based on the 
   // state chosen in the state dropdow list
-  popCityDrop(stateName);
+  var cityholder = popCityDrop(stateName);
+
+  
 }
 
 var statesList;
@@ -275,7 +291,7 @@ d3.json("http://127.0.0.1:5000/api/v1.0/weather/census_city").then(function(citi
 function loadCityData(state_abbr) {
   var base = 'static/data/cb_2018_us_cbsa_20m.zip';
   shp(base).then(function(data){
-    console.log("data loop", data);
+    // console.log("data loop", data);
     d3.json("http://127.0.0.1:5000/api/v1.0/weather/census_city").then(function(cities) {
       allFeatures = data.features;
       sel_features = []
@@ -297,51 +313,311 @@ loadCityData();
 function loadState() {
   var baseState = 'static/data/cb_2018_us_state_20m.zip';
   shp(baseState).then(function(data){
-    console.log(" statedata loop", data);
+    // console.log(" statedata loop", data);
       geoState.addData(data);
     });
 }
 loadState();
 
-
-
-
-
 //////////////////////////////////////////////////////////////////////////////////////
-/// Will need to include all of the city plot data in this function that is called
-/// when the city drop-down is changed
+/// The function below executes when a new city is chosen from the city dropdown.
+/// This fucntion contains all the code to create the Key Information graphic, the
+/// barchart on commuting method, the bar chart on education, and the pie chart on diversity.
+/// So each time a new city is chosen, each of these graphics is updated.
 //////////////////////////////////////////////////////////////////////////////////////
 
 function citySelected(cityName) {
-  console.log(cityName);
 
+/// This section bring in the city level data and filters for the chosen city
+
+    // Define url for Flask route that contains the city level data
+    var city_url = "http://localhost:5000/api/v1.0/weather/census_city"
+
+    /// set the cityHolder to the city chosen in dropdown
+    
+    cityholder=cityName;
+    
+
+    d3.json(city_url).then(function(data) {
+    var cityData = data;
+
+    // Filter the data to keep only records for the chosen city
+    var filteredData = cityData.filter(cityData => cityData.city_state === cityholder)[0];
+    
+    var data=filteredData.data;
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    /// This section outputs the key statistics for the city
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    // Prepare values to be inclued in key information section of page
+    var city = filteredData.city_state.split(",")[0]
+    var cityToPrint = city.concat(", ", data.state);
+    // numberal libary used to format values for printing
+    var populationFormat = numeral(data.population).format('0,0');
+    var populationToPrint =`Population: ${populationFormat}`;
+    var unemploymentFormat = numeral(data.unemployment_rate/100).format('0.0%');
+    var unemployToPrint = `Unemployment Rate: ${unemploymentFormat}`;
+    var incomeFormat = numeral(data.median_income).format('$0,0');
+    var incomeToPrint = `Median Income: ${incomeFormat}`;
+    var homeFormat = numeral(data.median_value).format('$0,0');
+    var homeToPrint = `Median Home Value: ${homeFormat}`;
+    
+    // Clear out any data that was already in the key info area
+    var selInfo = document.getElementById('keyInfo');
+
+    selInfo.innerHTML="";
+
+    d3.select("#keyInfo")
+        .append("h4")
+        .text(cityToPrint)
+        .append("p")
+        .text(populationToPrint)
+        .style("font-size", "30px")
+        .append("p")
+        .text(unemployToPrint)
+        .append("p")
+        .text(incomeToPrint)
+        .append("p")
+        .text(homeToPrint)
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    /// This section creates the bar chart on the mode of commuting
+    ////////////////////////////////////////////////////////////////////////////////////////////
+
+    // A few cities are missing data on commuting, so included this if statement  to test
+    // if no data before attempting to create plot.
+
+        // Clear out any data that was already in the key info area
+        var selCommute = document.getElementById('commute');
+
+        selCommute.innerHTML="";
+
+        if (filteredData.data.private_auto==="N") {
+          
+          d3.select("#commute")
+              .append("H4")
+              .text("No Data Available")
+        }
+        else {
+
+
+          var commute = [data.private_auto, data.public_transport, data.bike, data.walks, data.works_home , data.other] 
+          
+          var commuteLabels = ["Private Auto", "Pulic Transport", "Bike", "Walks", "Works at Home", "Other"]
+          
+          var trace1 = {
+              x: commuteLabels,
+              y: commute,
+              text: commuteLabels,
+              textposition: "auto",
+              marker:{color: ['hsla(0,100%,30%,1.0)', 'rgb(255,227,164,1.0)','rgb(255,227,164,1.0)',//
+          'rgb(255,227,164,1.0)','rgb(255,227,164,1.0)','rgb(255,227,164,1.0)'],
+          },
+              name: "Sample",
+              type: "bar",
+          };
+
+        // define data
+        var data = [trace1];
+                
+        // Define layout
+        var layout = {
+            margin: {
+            l: 60,
+            r: 50,
+            t: 30,
+            b: 100
+            },
+            yaxis: {
+            range: [0, 105],
+            title: {text: "Percentage (%)",
+            font:{
+                color: 'rgb(102,255,178)',
+                size: 15,
+                }
+                },
+            gridcolor:"white",
+            tickfont: {
+                // family: 'Old Standard TT, serif',
+                // size: 14,
+                color: 'white',
+            }
+            },
+
+            xaxis: {
+                // outlinecolor:"white",
+                tickangle: 45,
+                title:{text: "",
+                font:{
+                color: 'rgb(102,255,178)',
+                size: 25,
+                    }
+                },
+                tickfont: {
+                    // family: 'Old Standard TT, serif',
+                    // size: 14,
+                    color: 'white',
+                }
+            },
+            
+            plot_bgcolor: "rgb(6, 38, 53)",
+            paper_bgcolor:"rgb(6, 38, 53)",
+
+        };
+
+        // Render the plot to the div tag with id "commute"
+        Plotly.newPlot("commute", data, layout);
+    }
+
+    })
+
+////////////////////////////////////////////////////////////////////////////////////////////
+/// This section creates the pie chart on diversity
+////////////////////////////////////////////////////////////////////////////////////////////
+
+// Define url to Flask route wiht city data
+
+var city_url = "http://localhost:5000/api/v1.0/weather/census_city"
+
+// read in the data
+d3.json(city_url).then(function(data) {
+  var cityData = data;
+
+  // Filter the data to keep only records for the chosen city
+  var filteredData = cityData.filter(cityData => cityData.city_state === cityholder)[0];
+  
+  var data=filteredData.data;
+
+
+///======================================================================
+/// This section creates the pie chart on Diversity 
+///=====================================================================
+    d3.select("#diversity")
+      .append("div")
+
+    var diver = [data.white, data.black_african_american, //
+      data.american_indian_alaska_native, data.asian , data.hispanic_latino, data.some_other_race] 
+
+
+    var diverLabels = ["White", "Black African American", "American Indian Alaskan Native", "Asian",//
+     "Hispanic Latino", "Some Other Race"]
+    
+
+  
+     var data_diver = [{
+      type: "pie",
+      values: diver,
+      labels: diverLabels,
+      label:{
+        textfont: "white",
+      },
+      textinfo: "label+percent",
+      // textposition: "outside",
+      automargin: true,
+      showlegend: true,
+      outsidetextfont: 'white'
+    }]
+    
+    var layout = {
+      height: 400,
+      width: 400,
+      margin: {"t": 0, "b": 0, "l": 0, "r": 0},
+      showlegend: false,
+      paper_bgcolor: "rgb(6, 38, 53)",
+      }
+    
+      Plotly.newPlot("diversity", data_diver, layout);
+
+
+///======================================================================
+/// This section creates the bar chart on Education Level 
+///=====================================================================
+
+
+    d3.select("#eduLevel")
+      .append("div")
+
+    var education = [data.total_population_over_25_years_old, data.less_than_9th_grade, //
+      data.high_school_diploma, data.some_college_no_degree , data.associate_degree, data.bachelor_degree, //
+      data.graduate_proffesional_degree, data.high_school_graduate_or_higher, data.bachelor_degree_or_higher] 
+
+
+
+    var educationLabels = ["Population Over 25 Years Old", "Less than 9th Grade", "High School", "Some College",//
+     "Associate", "Bachelor", "Graduate Proffesional", "High School or Higher", "Bachelor or Higher"]
+    
+    var trace_edu = {
+      x: educationLabels,
+      y: education,
+      text: educationLabels,
+      textposition: 'auto',
+      textcolor: 'rgba(255,255,255,1)',
+      marker:{color: ['hsla(0,100%,30%,1.0)', 'rgb(255,227,164,1.0)', 'rgb(255,227,164,1.0)','rgb(255,227,164,1.0)',//
+      'rgb(255,227,164,1.0)','rgb(255,227,164,1.0)','rgb(255,227,164,1.0)','rgb(255,204,255,1.0)','rgb(255,204,255,1.0)'],
+      },
+      type: "bar",
+      
+  };
+
+  // define data
+    var data_edu = [trace_edu];
+          
+  
+  // Define layout
+    var layout = {
+      margin: {
+      l: 60,
+      r: 50,
+      t: 30,
+      b: 100
+      },
+      yaxis: {
+        title: {text: "Population",
+        zerolinecolor:"white",
+        font:{
+          color: 'rgb(102,255,178)',
+          size: 25,
+            }
+          },
+          gridcolor:"white",
+          tickfont: {
+            // family: 'Old Standard TT, serif',
+            // size: 14,
+            color: 'white',
+          }
+      },
+      xaxis: {
+        // outlinecolor:"white",
+        title:{text: "",
+        font:{
+          color: 'rgb(102,255,178)',
+          size: 25,
+            }
+          },
+          tickfont: {
+            // family: 'Old Standard TT, serif',
+            // size: 14,
+            color: 'white',
+          }
+      },
+      plot_bgcolor: "rgb(6, 38, 53)",
+      paper_bgcolor:"rgb(6, 38, 53)",
+
+      
+  };
+
+  // Render the plot to the div tag with id "eduLevel"
+  Plotly.newPlot("eduLevel", data_edu, layout);
+
+    
+ })  
 
 }
 
-
-
-
-// ///////////////////////////////////////////////////////////////////////////////////////////////////////
-// /// This section bring in the city level data and filters for the chosen city
-// ///////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// var city_url = "http://localhost:5000/api/v1.0/weather/census_city"
-
-// /// will replace this next line with reference to the city chosen from the webpage
-// cityholder="Beaver Dam,WI"
-// // cityholder="Carson City,NV"
-
-// d3.json(city_url).then(function(data) {
-//   var cityData = data;
-
-
-//   // console.log(cityData);
-//   // Filter the data to keep only records for the chosen city
-//   var filteredData = cityData.filter(cityData => cityData.city_state === cityholder)[0];
-  
-//   var data=filteredData.data;
-
-//   console.log(filteredData);
 
 
 
