@@ -19,7 +19,7 @@ d3.json(city_url).then(function(data) {
   
   var data=filteredData.data;
 
-  console.log(filteredData);
+  // console.log(filteredData);
 
 
   
