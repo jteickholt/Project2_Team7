@@ -37,6 +37,14 @@
   3. shp.min.js:  This file contains coordinates that were used to create the map.
 
 #### static/data folder contains:
+  1.  cb_2018_us_cbsa_20m.zip  ?? I think Ruby uses these
+  2.  cb_2018_us_state_20m.zip ?? I think Ruby uses these
+  3.  census_commuting.csv:  This file contains the raw census data on commuting at the city level.
+  4.  census_commuting_state.csv:  This file contains the raw census data on commuting at the state level.
+  5.  census_income.csv:  This file contains the raw census data on income at the city level.
+  6.  census_income_state.csv:  This file contains the raw census data on income at the state level.
+  7.  Census_median_home_value_by_metro.csv: This file contains the raw census data on home value at the city level. 
+  8.  census_median_home_value_by_state.csv: This file contains the raw census data on home value at the state level.
 
 #### static/data/cleaned folder contains:
   1.  master_city_data.csv:  This file contains all of the census data at the city level after it was processed and cleaned.  This file was then read into create_db_jeff.ipynb and output to city_data table in the database.
