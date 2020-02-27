@@ -142,6 +142,7 @@ function stateSelected(stateName) {
           y: minArray,
           type: 'scatter',
           name: "Min Temp",
+          
           marker: {
             color: 'rgb(0,0,255)'
           }
@@ -164,21 +165,42 @@ function stateSelected(stateName) {
         var data = [trace1, trace2, trace3];
     
         var layout = {
-          title: "Climate Chart",
-          xaxis: { title: "Month" },
-          yaxis: { title: "Temperature (F)", range: [0, 110], autorange: true, gridcolor:"white"},
+//          title: "Climate Chart",
+          xaxis: { 
+              title: {text:'Month',font:{ color: 'rgb(102,255,178)', size: 15 } },
+              tickfont: {
+                color: 'white',
+              }
+              },
+          yaxis: { 
+                  title: {text:'Temperature (F)',font:{ color: 'rgb(102,255,178)', size: 15 } },
+                  range: [0, 110], 
+                  autorange: false, 
+                  tickfont: {
+                    color: 'white',
+                  },
+                  gridcolor:"white"
+
+                 },
           yaxis2: {
-            title: 'Precipitation in Inches',
+            title: {text:'Precipitation',font:{ color: 'rgb(102,255,178)', size: 15 } },
             // titlefont: {color: '#ff7f0e'},
             // tickfont: {color: '#ff7f0e'},
             anchor: 'free',
             overlaying: 'y',
             side: 'right',
-            position: 1, range: [0, 10], autorange: true
-          },
+            position: 1, 
+            range: [0, 8], 
+            autorange: false,
+            tickfont: {
+              color: 'white',
+            }
+        },
           plot_bgcolor: "rgb(6, 38, 53)",
-          paper_bgcolor:"white"
-        }; 
+          // paper_bgcolor:"white"
+          // plot_bgcolor: "rgb(6, 38, 53)",
+          paper_bgcolor:"rgb(6, 38, 53)",
+         }; 
 
    
     Plotly.newPlot('lineChart', data, layout);
