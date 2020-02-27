@@ -1,3 +1,60 @@
+
+// ////////////////////////////////////////////////////////////////////////////////////////
+// ///  The following code will populate the city dropdown based on the state chosen
+// ///////////////////////////////////////////////////////////////////////////////////////
+
+
+var city_url = "http://localhost:5000/api/v1.0/weather/census_city"
+
+function popCityDrop(stateChosen) {
+  d3.json(city_url).then(function(data) {
+    var cityData = data;
+
+    // Filter the list of cities based on the state chosen
+    if (stateChosen === "Select") {
+        filteredState = cityData
+    }
+    else {
+      var filteredState = cityData.filter(cityData => cityData.data.state === stateChosen);
+    }
+
+    filteredState.sort(function(a, b){
+      return a.city_state - b.city_state;
+    });
+    
+    // Get the element id for the city dropdown
+    var sel = document.getElementById('selCity');
+
+    // clear out any data that was already there
+    sel.innerHTML="";
+
+    // sort the list of cities
+  
+
+    // iterate through the filtered list of cites and add the cities to the dropdown
+    filteredState.forEach(function(item) {
+      var cityList = item.city_state;
+
+      // create new option element
+      var opt = document.createElement('option');
+      // create text node to add to option element (opt)
+      opt.appendChild( document.createTextNode(item.city_state) );
+      // set value property of opt
+      opt.value = item.city_state; 
+      // add opt to end of select box (sel)
+      sel.appendChild(opt); 
+    });
+    
+  });
+
+}
+
+
+
+
+
+
+/////////////////////////////////////////////////////////
 // State selection dropdown
 /////////////////////////////////////////////////////////////
 
@@ -109,15 +166,26 @@ function stateSelected(stateName) {
     
         var layout = {
           title: "Climate Chart",
-          xaxis: { title: "Month" },
-          yaxis: { title: "Temperature (F)", range: [0, 110], autorange: false},
+          xaxis: { title: "Month" ,
+          tickfont: {
+            color: 'white',
+        }
+        },
+          yaxis: { title: "Temperature (F)", autorange: true,
+          tickfont: {
+            color: 'white',
+        },
           yaxis2: {
             title: 'Precipitation in Inches',
+            tickfont: {
+                color: 'white',
+            }
+            },
             // titlefont: {color: '#ff7f0e'},
             // tickfont: {color: '#ff7f0e'},
             anchor: 'free',
             overlaying: 'y',
-            side: 'right',
+            side: 'left',
             position: 1, range: [0, 10], autorange: true
           },
           plot_bgcolor: "rgb(6, 38, 53)",
@@ -219,6 +287,11 @@ function loadState() {
     });
 }
 loadState();
+
+
+  
+
+
 
 
 

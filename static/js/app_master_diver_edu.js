@@ -49,10 +49,14 @@ d3.json(city_url).then(function(data) {
       type: "pie",
       values: diver,
       labels: diverLabels,
+      label:{
+        textfont: "white",
+      },
       textinfo: "label+percent",
       // textposition: "outside",
       automargin: true,
-      showlegend: true
+      showlegend: true,
+      outsidetextfont: 'white'
     }]
     
     var layout = {
@@ -60,7 +64,7 @@ d3.json(city_url).then(function(data) {
       width: 400,
       margin: {"t": 0, "b": 0, "l": 0, "r": 0},
       showlegend: false,
-      paper_bgcolor: "rgb(6, 38, 53)"
+      paper_bgcolor: "rgb(6, 38, 53)",
       }
     
       Plotly.newPlot("diversity", data_diver, layout);
@@ -87,10 +91,13 @@ d3.json(city_url).then(function(data) {
       x: educationLabels,
       y: education,
       text: educationLabels,
-      name: "Sample",
+      textposition: 'auto',
+      textcolor: 'rgba(255,255,255,1)',
+      marker:{color: ['hsla(0,100%,30%,1.0)', 'rgb(255,227,164,1.0)', 'rgb(255,227,164,1.0)','rgb(255,227,164,1.0)',//
+      'rgb(255,227,164,1.0)','rgb(255,227,164,1.0)','rgb(255,227,164,1.0)','rgb(255,204,255,1.0)','rgb(255,204,255,1.0)'],
+      },
       type: "bar",
-      // colorbar: rgb(6, 38, 53),
-      // tickcolor: "white"
+      
   };
 
   // define data
@@ -106,22 +113,37 @@ d3.json(city_url).then(function(data) {
       b: 100
       },
       yaxis: {
-        title: {text: "Education Lavel (Population)"},
+        title: {text: "Population",
         zerolinecolor:"white",
-        coloraxis: "white",
-        gridcolor:"white",
-        outlinecolor:"white"
+        font:{
+          color: 'rgb(102,255,178)',
+          size: 25,
+            }
+          },
+          gridcolor:"white",
+          tickfont: {
+            // family: 'Old Standard TT, serif',
+            // size: 14,
+            color: 'white',
+          }
       },
-    //   xaxis: {
-    //     zerolinecolor:"white",
-    //     coloraxis: "white",
-    //     gridcolor:"white",
-    //     outlinecolor:"white"
-    //   },
+      xaxis: {
+        // outlinecolor:"white",
+        title:{text: "",
+        font:{
+          color: 'rgb(102,255,178)',
+          size: 25,
+            }
+          },
+          tickfont: {
+            // family: 'Old Standard TT, serif',
+            // size: 14,
+            color: 'white',
+          }
+      },
       plot_bgcolor: "rgb(6, 38, 53)",
       paper_bgcolor:"rgb(6, 38, 53)",
 
-      
       
   };
 

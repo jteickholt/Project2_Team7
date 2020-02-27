@@ -8,10 +8,10 @@
 
 .intro {
     position: relative;
-    height: 550px;
+    height: 510px;
     margin: 0;
     background: black;
-    background-image: url("shutterstock_1486328387.jpg");
+    background-image: url("banner_cityInsider.jpg");
     background-attachment: fixed;
     background-position: bottom center;
     background-size: cover;
@@ -39,8 +39,8 @@
 
 
 .row{
-    color: yellow;
-    font-size: x-large;
+    color: rgb(255,255,153);
+    font-size: xx-large;
     margin-right:0;
     margin-left: 0;
     position: relative;

@@ -79,9 +79,12 @@ d3.json(city_url).then(function(data) {
         x: commuteLabels,
         y: commute,
         text: commuteLabels,
+        textposition: "auto",
+        marker:{color: ['hsla(0,100%,30%,1.0)', 'rgb(255,227,164,1.0)','rgb(255,227,164,1.0)',//
+      'rgb(255,227,164,1.0)','rgb(255,227,164,1.0)','rgb(255,227,164,1.0)'],
+      },
         name: "Sample",
         type: "bar",
-        // orientation: "h"
     };
 
     // define data
@@ -90,22 +93,45 @@ d3.json(city_url).then(function(data) {
     // Define layout
     var layout = {
         margin: {
-        l: 40,
-        r: 30,
-        t: 10,
-        b: 10
+        l: 60,
+        r: 50,
+        t: 30,
+        b: 100
         },
         yaxis: {
-          title: {text: "Percentage (%)"},
-          zerolinecolor:"white",
-          coloraxis: "white",
+          title: {text: "Percentage (%)",
+          font:{
+            color: 'rgb(102,255,178)',
+            size: 25,
+              }
+            },
           gridcolor:"white",
-          outlinecolor:"white"
+          tickfont: {
+            // family: 'Old Standard TT, serif',
+            // size: 14,
+            color: 'white',
+          }
         },
+
+        xaxis: {
+            // outlinecolor:"white",
+            tickangle: 45,
+            title:{text: "",
+            font:{
+              color: 'rgb(102,255,178)',
+              size: 25,
+                }
+              },
+              tickfont: {
+                // family: 'Old Standard TT, serif',
+                // size: 14,
+                color: 'white',
+              }
+          },
         
         plot_bgcolor: "rgb(6, 38, 53)",
         paper_bgcolor:"rgb(6, 38, 53)",
-        // paper_bgcolor:"LightGrey"
+
     };
 
     // Render the plot to the div tag with id "commute"

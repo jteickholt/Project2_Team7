@@ -163,11 +163,10 @@ function stateSelected(stateName) {
         // The data array consists of all 3 traces
         var data = [trace1, trace2, trace3];
     
-    
         var layout = {
           title: "Climate Chart",
           xaxis: { title: "Month" },
-          yaxis: { title: "Temperature (F)", range: [0, 110], autorange: false},
+          yaxis: { title: "Temperature (F)", range: [0, 110], autorange: true, gridcolor:"white"},
           yaxis2: {
             title: 'Precipitation in Inches',
             // titlefont: {color: '#ff7f0e'},
@@ -175,9 +174,12 @@ function stateSelected(stateName) {
             anchor: 'free',
             overlaying: 'y',
             side: 'right',
-            position: 1, range: [0, 10], autorange: false
-          }
+            position: 1, range: [0, 10], autorange: true
+          },
+          plot_bgcolor: "rgb(6, 38, 53)",
+          paper_bgcolor:"white"
         }; 
+
    
     Plotly.newPlot('lineChart', data, layout);
   });
