@@ -29,10 +29,15 @@ function popCityDrop(stateChosen) {
 
     // sort the list of cities
   
+    var firstOne = true;
 
     // iterate through the filtered list of cites and add the cities to the dropdown
     filteredState.forEach(function(item) {
       var cityList = item.city_state;
+      if (firstOne){
+        citySelected(item.city_state);
+        firstOne = false;
+      }
 
       // create new option element
       var opt = document.createElement('option');
