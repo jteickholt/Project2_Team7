@@ -57,7 +57,7 @@
   2.  shutterstock_1486328387.jpg:  Picture that is displayed at the top of our website.
 
 
-### Original Proposal (This was the original proposal that we submitted.  After exploring the data, we had to make a few adjustments)
+### Original Proposal (This was the original proposal that we submitted.  After exploring the data and timing, we had to make a few adjustments)
 
 ### Project Title: Do you want to relocate to ...?
 
