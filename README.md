@@ -6,7 +6,7 @@
 
 #### Description:  We created an interactive dashboard that allowed the uses to view some key informaton about a chosen city in the United States.  To make the interaction more manageable, we allow the user to first choose the state that they are interested in through a standard drop-down list.  Based on the state chosen, a second drop-down is populated with the cities available for that state.  This drop-down is searchable, so the user can type the first letter of the city to quickly find the city of interest.  We originally had planned to allow the user to view state or city data, but we eventually decided to focus on just displaying the city.  We did process state data, so you will see a table for that in our database.  Below is a quick description of how this project met the project requirements.  Our original proposal is included at the very bottom of this readme.
 
-1.  We input data from the Census American Community Survey from csv files at the city and state level.  We also obtained weather data though webscraping at the state level only, as it was not easily available at the city level.  This data was processed and then output to a PostgreSQL datebase.  The data from the database was then accessed by a Flask application, which had several routes and published the necessary data in a JSON format.
+1.  We input data from the Census American Community Survey from csv files at the city and state level.  Here is the link for Census files https://www.census.gov/data/tables.html. We also obtained weather data though webscraping at the state level only. Here is the link to the site https://www.usclimatedata.com/.  This data was processed and then output to a PostgreSQL datebase.  The data from the database was then accessed by a Flask application, which had several routes and published the necessary data in a JSON format.
 
 2.  We created an interactive dashboard using the data from the Flask application and javascript code.  The visualizations on the page update based on the city chosen.
 
@@ -34,11 +34,17 @@
 #### static/js folder contains:
   1.  app_master.js:  This is the final javascript file that contains all the the code to create the visualizations. This final version was compiled from indiducal js scripts developed by each team member.
   2. config.js:  File used to store key for mapbox map.
-  3. shp.min.js:  This file contains coordinates that were used to create the map.
+  3. shp.min.js:  This is a 3rd party library to load shape files to the Leaflet maps
+            https://github.com/calvinmetcalf/leaflet.shapefile
+            We found it from the list of plugins on Leaflet 
+            https://leafletjs.com/plugins.html
+
 
 #### static/data folder contains:  Note we originally planned to use the census API to get the data we were interested in.  However, after investigation, we found that the API didn't get us the data we expected, so we relied on downloads from the census website.  The website makes a user pick a particular report to run, so to get all of the data we were interested in, we had to run several reports at both the city and state level, which explains the large number of files. 
-  1.  cb_2018_us_cbsa_20m.zip  ?? I think Ruby uses these
-  2.  cb_2018_us_state_20m.zip ?? I think Ruby uses these
+  1.  cb_2018_us_cbsa_20m.zip This file contains the shapes of all the US metros
+          https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html
+  2.  cb_2018_us_state_20m.zip This file contains the shapes of all the US states - we got it from US Census
+          https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html
   3.  census_commuting.csv:  This file contains the raw census data on commuting at the city level. Input to census_data_prep_jeff.ipynb.
   4.  census_commuting_state.csv:  This file contains the raw census data on commuting at the state level.  Input to census_data_prep_jeff.ipynb.
   5.  census_income.csv:  This file contains the raw census data on income at the city level.  Input to census_data_prep_jeff.ipynb.
