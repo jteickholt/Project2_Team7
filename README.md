@@ -39,17 +39,23 @@
 #### static/data folder contains:  Note we originally planned to use the census API to get the data we were interested in.  However, after investigation, we found that the API didn't get us the data we expected, so we relied on downloads from the census website.  The website makes a user pick a particular report to run, so to get all of the data we were interested in, we had to run several reports at both the city and state level, which explains the large number of files. 
   1.  cb_2018_us_cbsa_20m.zip  ?? I think Ruby uses these
   2.  cb_2018_us_state_20m.zip ?? I think Ruby uses these
-  3.  census_commuting.csv:  This file contains the raw census data on commuting at the city level.
-  4.  census_commuting_state.csv:  This file contains the raw census data on commuting at the state level.
-  5.  census_income.csv:  This file contains the raw census data on income at the city level.
-  6.  census_income_state.csv:  This file contains the raw census data on income at the state level.
-  7.  Census_median_home_value_by_metro.csv: This file contains the raw census data on home value at the city level. 
-  8.  census_median_home_value_by_state.csv: This file contains the raw census data on home value at the state level.
-  9.  census_population.csv:  This file contains the raw census data on population at the city level.
-  10. census_population_state.csv:  This file contains the raw census data on population at the state level.
-  11. census_unemployment.csv:  This file contains the raw census data on unemployment at the state level.
-  12. census_unemployment_state.csv:  This file contains the raw census data on unemployment at the state level.
-  13. data_diver_city.csv:  This file contains the raw census data on diversity at the city level.
+  3.  census_commuting.csv:  This file contains the raw census data on commuting at the city level. Input to census_data_prep_jeff.ipynb.
+  4.  census_commuting_state.csv:  This file contains the raw census data on commuting at the state level.  Input to census_data_prep_jeff.ipynb.
+  5.  census_income.csv:  This file contains the raw census data on income at the city level.  Input to census_data_prep_jeff.ipynb.
+  6.  census_income_state.csv:  This file contains the raw census data on income at the state level.  Input to census_data_prep_jeff.ipynb.
+  7.  Census_median_home_value_by_metro.csv: This file contains the raw census data on home value at the city level.  Input to census_data_prep_jeff.ipynb. 
+  8.  census_median_home_value_by_state.csv: This file contains the raw census data on home value at the state level.  Input to census_data_prep_jeff.ipynb.
+  9.  census_population.csv:  This file contains the raw census data on population at the city level.  Input to census_data_prep_jeff.ipynb.
+  10. census_population_state.csv:  This file contains the raw census data on population at the state level.  Input to census_data_prep_jeff.ipynb.
+  11. census_unemployment.csv:  This file contains the raw census data on unemployment at the state level.  Input to census_data_prep_jeff.ipynb.
+  12. census_unemployment_state.csv:  This file contains the raw census data on unemployment at the state level.  Input to census_data_prep_jeff.ipynb.
+  13. data_diver_city.csv:  This file contains the raw census data on diversity at the city level.  Input to div_edu_las.ipynb.
+  14. data_diver_state.csv:  This file contains the raw census data on diversity at the state level.  Input to div_edu_las.ipynb.
+  15. data_edu_city.csv:  This file contains the raw census data on education at the city level.  Input to div_edu_las.ipynb.
+  16. data_edu_state.csv:  This file contains the raw census data on education at the state level.  Input to div_edu_las.ipynb.
+  17. state_lat_long.csv:  Data on the center latitude and longiture use for create map.
+  18. state_temprature.csv:  Data on the weather for each state.  Output from weather_data_ruby.ipynb. Input to census_data_prep_jeff.ipynb
+  19. state_to_stateabbr.csv:  Data that maps state name to state abbreviation. Input to census_data_prep_jeff.ipynb.
   
 
 #### static/data/cleaned folder contains:
