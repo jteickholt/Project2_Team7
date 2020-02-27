@@ -36,7 +36,7 @@
   2. config.js:  File used to store key for mapbox map.
   3. shp.min.js:  This file contains coordinates that were used to create the map.
 
-#### static/data folder contains:
+#### static/data folder contains:  Note we originally planned to use the census API to get the data we were interested in.  However, after investigation, we found that the API didn't get us the data we expected, so we relied on downloads from the census website.  The website makes a user pick a particular report to run, so to get all of the data we are interested in, we had to run several reports at both the city and state level, which explains the large number of files. 
   1.  cb_2018_us_cbsa_20m.zip  ?? I think Ruby uses these
   2.  cb_2018_us_state_20m.zip ?? I think Ruby uses these
   3.  census_commuting.csv:  This file contains the raw census data on commuting at the city level.
@@ -45,6 +45,12 @@
   6.  census_income_state.csv:  This file contains the raw census data on income at the state level.
   7.  Census_median_home_value_by_metro.csv: This file contains the raw census data on home value at the city level. 
   8.  census_median_home_value_by_state.csv: This file contains the raw census data on home value at the state level.
+  9.  census_population.csv:  This file contains the raw census data on population at the city level.
+  10. census_population_state.csv:  This file contains the raw census data on population at the state level.
+  11. census_unemployment.csv:  This file contains the raw census data on unemployment at the state level.
+  12. census_unemployment_state.csv:  This file contains the raw census data on unemployment at the state level.
+  13. data_diver_city.csv:  This file contains the raw census data on diversity at the city level.
+  
 
 #### static/data/cleaned folder contains:
   1.  master_city_data.csv:  This file contains all of the census data at the city level after it was processed and cleaned.  This file was then read into create_db_jeff.ipynb and output to city_data table in the database.
